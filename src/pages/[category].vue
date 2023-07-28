@@ -1,11 +1,23 @@
 <script lang="ts" setup>
 const { surround, navigation } = useContent();
+//- navigation
+const navItems = computed(() => {
+  return navigation.value;
+});
+
 // get query of category page
 const resetError = (error: any) => {
   error.value = null;
 };
 </script>
 <template lang="pug">
+pre navigation;{{ navigation }}
+.debug.flex.bg-blue-50.my-8
+    pre.label default.vue
+    template(v-for="item in navItems")
+        div.p-4.border.rounded.h-12.flex.items-center
+            //- pre item;{{ item }}
+            NuxtLink(:to="item._path") {{ item.title }}
 pre.label [category].vue
 .debug.mt-8.flex.space-x-6
     div.w-64.bg-blue-400.prose.shrink-0.p-4

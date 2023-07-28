@@ -13,7 +13,7 @@ main
   button(@click="throwError",class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded") throwerror
 
   .prose
-    ContentDoc(:key="page._id" :value="page")
+    ContentDoc(:key="page.contentId" :value="page")
   //- template(v-if="page")
   //-   pre page;{{ page }}
   //- template(v-else)
