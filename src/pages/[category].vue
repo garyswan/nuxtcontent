@@ -20,28 +20,28 @@ const resetError = (error: any) => {
             NuxtLink(:to="item._path", :prefetch="false") {{ item.title }}
 
 .debug
-    pre page;{{ page }}
+    //- pre page;{{ page }}
 
-//- pre.label [category].vue
-//- .debug.mt-8.flex.space-x-6
-//-     div.w-64.bg-blue-400.prose.shrink-0.p-4
-//-         ul.list-disc
-//-             li insert files
-//-         template(v-for="item in surround")
-//-             li
-//-                 a(:href="item._path") {{ item.title }}
-//-     div.bg-blue-300.grow.flex.flex-col.space-y-8
-//-         //- h1.text-xl page.title;{{ page.title }}
-//-         h1.text-xl page.title;{{ page?.title || 'nothing here' }}
-//-         //- pre page;{{ page }}
-//-         pre.label .src/[category]/[..slug].vue
-//-         pre below:NuxtErrorBoundary > NuxtPage    
-//-         div.prose
-//-             NuxtErrorBoundary
-//-                 NuxtPage
-//-                 template(#error="{ error}") 
-//-                     p slug page broke
-//-                     code {{ error }}
-//-                     button(@click="resetError(error)",class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded") reset error
+pre.label [category].vue
+.debug.mt-8.flex.space-x-6
+    div.w-64.bg-blue-400.prose.shrink-0.p-4
+        ul.list-disc
+            li insert files
+        template(v-for="item in surround")
+            li
+                a(:href="item._path") {{ item.title }}
+    div.bg-blue-300.grow.flex.flex-col.space-y-8
+        //- h1.text-xl page.title;{{ page.title }}
+        h1.text-xl page.title;{{ page?.title || 'nothing here' }}
+        //- pre page;{{ page }}
+        pre.label .src/[category]/[..slug].vue
+        pre below:NuxtErrorBoundary > NuxtPage    
+        div.prose
+            NuxtErrorBoundary
+                NuxtPage
+                template(#error="{ error}") 
+                    p slug page broke
+                    code {{ error }}
+                    button(@click="resetError(error)",class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded") reset error
 
 </template>
