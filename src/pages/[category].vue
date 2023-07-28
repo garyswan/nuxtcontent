@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-const { surround, page, navigation } = useContent();
-//- navigation
-const navItems = computed(() => {
-  return navigation.value;
-});
+// const { surround, page, navigation } = useContent();
+// //- navigation
+// const navItems = computed(() => {
+//   return navigation.value;
+// });
 
 // get query of category page
 const resetError = (error: any) => {
