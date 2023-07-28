@@ -33,11 +33,11 @@ main.bg-yellow-400
         template(#not-found)
           h1.text-2xl.font-bold.my-4 Page Not Found
     aside.bg-blue-300
-      ContentList(path="/business" v-slot="{ list }")
-        div(v-for="(article,index) in list.slice(0,9)" :key="article._path")
-            NuxtLink(:href="article._path")
-                h2 {{index}}:{{ article.title }}
-                p {{ article.description }}
+      //- ContentList(path="/business" v-slot="{ list }")
+      //-   div(v-for="(article,index) in list.slice(0,9)" :key="article._path")
+      //-       NuxtLink(:href="article._path")
+      //-           h2 {{index}}:{{ article.title }}
+      //-           p {{ article.description }}
     
     
       

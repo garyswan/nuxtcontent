@@ -31,11 +31,14 @@ pre.label [category].vue
 .container.debug.mt-8.mx-auto
     div.flex.space-x-6
         .w-64.bg-red-400.prose.shrink-0.p-4(class="min-h-[24rem]")
-            ContentList(:path="$route.params.category" v-slot="{ list }")
-                div(v-for="(article,index) in list.slice(0,9)" :key="article._path")
-                    NuxtLink(:href="article._path")
-                        h2 {{index}}:{{ article.title }}
-                        p {{ article.description }}
+            ContentList(:path="$route.params.category")
+                template(#default="{list}")
+                    div(v-for="(article,index) in list.slice(0,9)" :key="article._path")
+                        NuxtLink(:href="article._path")
+                            h2 {{index}}:{{ article.title }}
+                            p {{ article.description }}
+                template(#not-found)
+                    h1.text-2xl.font-bold.my-4 Section Not Found
                     
             //- ContentList(:path="$route.params.category" v-slot="{ list }")
             //-     pre ContentList;
