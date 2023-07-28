@@ -24,7 +24,7 @@ main.bg-yellow-400
             h1.text-3xl.my-3.font-bold {{ doc.title }}
             p.text-lg {{ doc.description ?? 'doc.description;'}}
             template(v-if="doc.hero?.images?.length > 0")
-              .aspect-video
+              .aspect-video.bg-slate-300
                 img.bg-cover.w-full(:src="doc.hero.images[0].src",width="300")
             //- pre {{ doc }}
             //- ContentRenderer.prose(:value="doc")

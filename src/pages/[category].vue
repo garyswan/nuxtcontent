@@ -33,7 +33,7 @@ pre.label [category].vue
         .w-64.bg-red-400.prose.shrink-0.p-4(class="min-h-[24rem]")
             ContentList(:path="$route.params.category")
                 template(#default="{list}")
-                    div(v-for="(article,index) in list.slice(0,25)" :key="article._path")
+                    div(v-for="(article,index) in list.slice(0,50)" :key="article._path")
                         NuxtLink(:href="article._path")
                             h2 {{index}}:{{ article.title }}
                             p {{ article.description }}
