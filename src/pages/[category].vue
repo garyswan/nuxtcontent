@@ -32,8 +32,10 @@ pre.label [category].vue
     div.w-64.bg-red-400.prose.shrink-0.p-4
         ContentList(path="/business" v-slot="{ list }")
             div(v-for="(article,index) in list.slice(0,9)" :key="article._path")
-                h2 {{index}}:{{ article.title }}
-                p {{ article.description }}
+                NuxtLink(:href="article._path")
+                    h2 {{index}}:{{ article.title }}
+                    p {{ article.description }}
+                 
         //- ContentList(:path="$route.params.category" v-slot="{ list }")
         //-     pre ContentList;
         //-     div(v-for="article in list.splice(0,5)" :key="article._path")
