@@ -20,13 +20,14 @@ main.bg-yellow-400
     //- <ContentDoc v-slot="{ doc }">
     ContentDoc
       template(#default="{doc}")
-        h1 x{{ doc.title }}
-        p.text-lg {{ doc.description ?? 'doc.description;'}}
-        template(v-if="doc.hero?.images?.length > 0")
-          .aspect-video
-            img.bg-cover(:src="doc.hero.images[0].src")
-        //- pre {{ doc }}
-        ContentRenderer.prose(:value="doc")
+        template(v-if="doc")
+          h1 x{{ doc.title }}
+          p.text-lg {{ doc.description ?? 'doc.description;'}}
+          template(v-if="doc.hero?.images?.length > 0")
+            .aspect-video
+              img.bg-cover(:src="doc.hero.images[0].src")
+          //- pre {{ doc }}
+          ContentRenderer.prose(:value="doc")
       //- template(#empty)
       //-   h1.text-2xl.font-bold.my-4 Page Empty
       template(#not-found)
