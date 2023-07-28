@@ -1,0 +1,115 @@
+{
+ "data": [
+  {
+   "path": [
+    "business"
+   ],
+   "codenames": [
+    "oursc_category_business"
+   ]
+  },
+  {
+   "path": [
+    "lifestyle"
+   ],
+   "codenames": [
+    "oursc_category_lifestyle"
+   ]
+  },
+  {
+   "path": [
+    "environment"
+   ],
+   "codenames": [
+    "oursc_category_environment"
+   ]
+  },
+  {
+   "path": [
+    "podcasts"
+   ],
+   "codenames": [
+    "oursc_category_podcasts"
+   ]
+  },
+  {
+   "path": [
+    "lifestyle",
+    "gardening"
+   ],
+   "codenames": [
+    "oursc_category_gardening"
+   ]
+  },
+  {
+   "path": [
+    "community"
+   ],
+   "codenames": [
+    "oursc_category_community"
+   ]
+  },
+  {
+   "path": [
+    "council"
+   ],
+   "codenames": [
+    "oursc_category_council_news"
+   ]
+  },
+  {
+   "path": [
+    "lifestyle",
+    "health"
+   ],
+   "codenames": [
+    "oursc_category_health"
+   ]
+  },
+  {
+   "path": [
+    "community",
+    "arts"
+   ],
+   "codenames": [
+    "oursc_category_arts"
+   ]
+  },
+  {
+   "path": [
+    "lifestyle",
+    "adventure-sunshine-coast"
+   ],
+   "codenames": [
+    "oursc_category_adventure_sunshine_coast"
+   ]
+  },
+  {
+   "path": [
+    "community",
+    "events"
+   ],
+   "codenames": [
+    "oursc_category_events"
+   ]
+  },
+  {
+   "path": [
+    "community",
+    "heritage"
+   ],
+   "codenames": [
+    "oursc_category_heritage"
+   ]
+  },
+  {
+   "path": [
+    "community",
+    "education"
+   ],
+   "codenames": [
+    "oursc_category_education"
+   ]
+  }
+ ]
+}

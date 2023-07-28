@@ -1,0 +1,10 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+pre.label {
+  @apply bg-slate-600 text-white inline-block px-4 py-2 rounded;
+}
+.debug {
+  @apply border-pink-500 border-dotted border;
+}
