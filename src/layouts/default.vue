@@ -5,7 +5,7 @@
     header
         pre insert navigation 
         .flex 
-            NuxtLink.p-4.rounded.border(to="/",prefetch=false) Home
+            NuxtLink.p-4.rounded.border(to="/") Home
             NuxtLink.p-4.rounded.border(to="/business",prefetch=false) Business
             NuxtLink.p-4.rounded.border(to="/business/10-million-expansion-shows-confidence-in-sunshine-coast",prefetch=false) Business - Real Page
             NuxtLink.p-4.rounded.border(to="/business/10-million-expansion-shows-confidence-in-sunshine-coast-NOT",prefetch=false) Business - NOT Real Page

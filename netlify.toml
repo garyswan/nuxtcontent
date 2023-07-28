@@ -4,7 +4,7 @@
 
 [context.production]
   publish = "dist/"
-  command = "yarn build"
+  command = "yarn generate"
 
 # Deploy Preview context: all deploys generated from
 # a pull/merge request will inherit these settings.
