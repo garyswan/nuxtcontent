@@ -30,7 +30,10 @@ const resetError = (error: any) => {
 pre.label [category].vue
 .debug.mt-8.flex.space-x-6
     div.w-64.bg-red-400.prose.shrink-0.p-4
-        pre TODO: insert ContentList
+        ContentList(path="/business" v-slot="{ list }")
+            div(v-for="(article,index) in list.slice(0,9)" :key="article._path")
+                h2 {{index}}:{{ article.title }}
+                p {{ article.description }}
         //- ContentList(:path="$route.params.category" v-slot="{ list }")
         //-     pre ContentList;
         //-     div(v-for="article in list.splice(0,5)" :key="article._path")

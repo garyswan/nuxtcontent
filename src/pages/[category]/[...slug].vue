@@ -18,6 +18,9 @@ main.bg-yellow-400
     //- pre {{ doc }}
     //- The default slot can be used to render the content via v-slot="{ data }" syntax:
     //- <ContentDoc v-slot="{ doc }">
+    div
+      pre insert related articles
+    
     ContentDoc
       template(#default="{doc}")
         template(v-if="doc")
