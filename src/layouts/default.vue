@@ -17,7 +17,7 @@ const navItems = computed(() => {
     
     main.bg-red-400(class="min-h-[32rem]")
         //- slot
-        slot
+        slot(:key="$route.path")
         //- (o )
             
 
