@@ -1,0 +1,22 @@
+# Production context: all deploys from the Production branch
+# set in your site’s Branches settings in the UI will inherit
+# these settings.
+
+[context.production]
+  publish = "dist/"
+  command = "yarn generate"
+
+# Deploy Preview context: all deploys generated from
+# a pull/merge request will inherit these settings.
+[context.branch-deploy]
+  # base=""
+  publish = "dist/"
+  command = "yarn build"
+  # command = "yarn generate"
+  # environment=""
+  # processing=""
+
+# Deploy Preview context: all deploys generated from
+# a pull/merge request will inherit these settings.
+# [context.deploy-preview]
+#   publish = "dist/"
