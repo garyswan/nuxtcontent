@@ -9,8 +9,7 @@ const throwError = () => {
 <template lang="pug">
 main.bg-yellow-400
   pre.label [...slug.vue]
-
-  .white-bg.rounded.p-8
+  .white-bg.rounded.p-8.grid.grid-cols-3.gap-4
     //- pre {{ page }}
     //- The fastest way to query and display your content.
     //- https://content.nuxtjs.org/api/components/content-doc
@@ -18,23 +17,29 @@ main.bg-yellow-400
     //- pre {{ doc }}
     //- The default slot can be used to render the content via v-slot="{ data }" syntax:
     //- <ContentDoc v-slot="{ doc }">
-    div
-      pre insert related articles
+    article.bg-blue-300.col-span-2
+      ContentDoc.prose
+        template(#default="{doc}")
+          template(v-if="doc")
+            h1.text-3xl.my-3.font-bold {{ doc.title }}
+            p.text-lg {{ doc.description ?? 'doc.description;'}}
+            template(v-if="doc.hero?.images?.length > 0")
+              .aspect-video
+                img.bg-cover.w-full(:src="doc.hero.images[0].src",width="300")
+            //- pre {{ doc }}
+            ContentRenderer.prose(:value="doc")
+        //- template(#empty)
+        //-   h1.text-2xl.font-bold.my-4 Page Empty
+        template(#not-found)
+          h1.text-2xl.font-bold.my-4 Page Not Found
+    aside.bg-blue-300
+      ContentList(path="/business" v-slot="{ list }")
+        div(v-for="(article,index) in list.slice(0,9)" :key="article._path")
+            NuxtLink(:href="article._path")
+                h2 {{index}}:{{ article.title }}
+                p {{ article.description }}
     
-    ContentDoc
-      template(#default="{doc}")
-        template(v-if="doc")
-          h1 x{{ doc.title }}
-          p.text-lg {{ doc.description ?? 'doc.description;'}}
-          template(v-if="doc.hero?.images?.length > 0")
-            .aspect-video
-              img.bg-cover(:src="doc.hero.images[0].src")
-          //- pre {{ doc }}
-          ContentRenderer.prose(:value="doc")
-      //- template(#empty)
-      //-   h1.text-2xl.font-bold.my-4 Page Empty
-      template(#not-found)
-        h1.text-2xl.font-bold.my-4 Page Not Found
+    
       
 //- .debug 
 //-   h1.text-2xl.font-bold.my-4 category;{{ $route.params.category }}:route;{{ $route.params.slug }}

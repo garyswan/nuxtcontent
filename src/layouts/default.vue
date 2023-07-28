@@ -11,7 +11,7 @@
             //- NuxtLink.p-4.rounded.border(to="/business/10-million-expansion-shows-confidence-in-sunshine-coast-NOT",noPrefetch,prefetchedClass="is-fetched") Business - NOT Real Page
             NuxtLink.p-4.rounded.border(to="/council",prefetchedClass="is-fetched") Council
 
-    main.bg-red-200(class="min-h-[32rem]")
+    .w-full.bg-red-200(class="min-h-[32rem]")
         //- slot
         slot(:key="$route.path")
         //- (o )
@@ -30,5 +30,8 @@
 <style lang="css">
 .is-fetched {
   background: blueviolet !important;
+}
+.router-link-active {
+  color: chartreuse !important;
 }
 </style>
