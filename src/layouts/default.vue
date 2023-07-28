@@ -5,11 +5,11 @@
     header
         pre insert navigation 
         .flex 
-            NuxtLink.p-4.rounded.border(to="/") Home
-            NuxtLink.p-4.rounded.border(to="/business",prefetch=false) Business
-            NuxtLink.p-4.rounded.border(to="/business/10-million-expansion-shows-confidence-in-sunshine-coast",prefetch=false) Business - Real Page
-            NuxtLink.p-4.rounded.border(to="/business/10-million-expansion-shows-confidence-in-sunshine-coast-NOT",prefetch=false) Business - NOT Real Page
-            NuxtLink.p-4.rounded.border(to="/council",prefetch=false) Council
+            NuxtLink.p-4.rounded.border(to="/",prefetchedClass="is-fetched") Home
+            NuxtLink.p-4.rounded.border(to="/business",prefetchedClass="is-fetched") Business
+            NuxtLink.p-4.rounded.border(to="/business/10-million-expansion-shows-confidence-in-sunshine-coast",prefetchedClass="is-fetched") Business - Real Page
+            NuxtLink.p-4.rounded.border(to="/business/10-million-expansion-shows-confidence-in-sunshine-coast-NOT",noPrefetch,prefetchedClass="is-fetched") Business - NOT Real Page
+            NuxtLink.p-4.rounded.border(to="/council",prefetchedClass="is-fetched") Council
 
     main.bg-red-200(class="min-h-[32rem]")
         //- slot
@@ -27,3 +27,8 @@
     //-     slot(:key="$route.path")
 
 </template>
+<style lang="css">
+.is-fetched {
+  background: blueviolet !important;
+}
+</style>
