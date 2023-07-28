@@ -30,8 +30,8 @@ const resetError = (error: any) => {
 pre.label [category].vue
 .container.debug.mt-8.mx-auto
     div.flex.space-x-6
-        div.w-64.bg-red-400.prose.shrink-0.p-4
-            ContentList(path="/business" v-slot="{ list }")
+        .w-64.bg-red-400.prose.shrink-0.p-4(class="min-h-[24rem]")
+            ContentList(:path="$route.params.category" v-slot="{ list }")
                 div(v-for="(article,index) in list.slice(0,9)" :key="article._path")
                     NuxtLink(:href="article._path")
                         h2 {{index}}:{{ article.title }}
