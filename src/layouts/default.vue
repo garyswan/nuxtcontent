@@ -1,17 +1,27 @@
 <script lang="ts" setup>
 const navigation = [
   { text: "Business", href: "/business" },
-  { text: "Community", href: "Community" },
-  { text: "Arts", href: "/arts" },
-  { text: "Education", href: "/education" },
-  { text: "Events", href: "/events" },
-  { text: "Heritage", href: "/heritage" },
+  {
+    text: "Community",
+    href: "/community",
+    children: [
+      { text: "Arts", href: "/arts" },
+      { text: "Events", href: "/events" },
+      { text: "Heritage", href: "/heritage" },
+      { text: "Education", href: "/education" },
+    ],
+  },
   { text: "Council", href: "/council" },
   { text: "Environment", href: "/environment" },
-  { text: "Lifestyle", href: "/lifestyle" },
-  { text: "Adventure Sunshine Coast", href: "/adventure-sunshine-coast" },
-  { text: "Gardening", href: "/gardening" },
-  { text: "Health", href: "/health" },
+  {
+    text: "Lifestyle",
+    href: "/lifestyle",
+    children: [
+      { text: "Gardening", href: "/gardening" },
+      { text: "Adventure Sunshine Coast", href: "/adventure-sunshine-coast" },
+      { text: "Health", href: "/health" },
+    ],
+  },
   { text: "Podcasts", href: "/podcasts" },
 ];
 </script>
