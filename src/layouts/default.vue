@@ -37,10 +37,10 @@ const navigation = [
             template(v-for="item in navigation")
                 div.h-12.bg-blue-400
                     NuxtLink.p-4.rounded.border(:to="item.href",prefetchedClass="is-fetched") {{ item.text }}
-                    template(v-if="item.children?.length > 0")
-                        template(v-for="child in item.children")
-                            div.h-12
-                                NuxtLink.p-4.rounded.border(:to="`${item.href}${child.href}`",prefetchedClass="is-fetched") {{ child.text }}
+                    //- template(v-if="item.children?.length > 0")
+                    //-     template(v-for="child in item.children")
+                    //-         div.h-12
+                    //-             NuxtLink.p-4.rounded.border(:to="${item.href}${child.href}",prefetchedClass="is-fetched") {{ child.text }}
         
 
     .w-full.bg-red-200(class="min-h-[32rem]")
