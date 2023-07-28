@@ -27,7 +27,7 @@ main.bg-yellow-400
               .aspect-video
                 img.bg-cover.w-full(:src="doc.hero.images[0].src",width="300")
             //- pre {{ doc }}
-            ContentRenderer.prose(:value="doc")
+            //- ContentRenderer.prose(:value="doc")
         //- template(#empty)
         //-   h1.text-2xl.font-bold.my-4 Page Empty
         template(#not-found)
