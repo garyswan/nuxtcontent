@@ -28,15 +28,20 @@ const navigation = [
 <template lang="pug">
 #layout__oursc.min-h-screen.bg-slate-100s.debug
     //- pre.label default.vue
-    header
-        pre insert navigation 
-        .flex 
-            NuxtLink.p-4.rounded.border(to="/",prefetchedClass="is-fetched") Home
-            //- NuxtLink.p-4.rounded.border(to="/business",prefetchedClass="is-fetched") Business
-            //- NuxtLink.p-4.rounded.border(to="/business/10-million-expansion-shows-confidence-in-sunshine-coast",prefetchedClass="is-fetched") Business - Real Page
+    header.block
+        .flex.gap-4
+            div
+                NuxtLink.p-4.rounded.border(to="/",prefetchedClass="is-fetched") Home
+                //- //- NuxtLink.p-4.rounded.border(to="/business",prefetchedClass="is-fetched") Business
+                //- //- NuxtLink.p-4.rounded.border(to="/business/10-million-expansion-shows-confidence-in-sunshine-coast",prefetchedClass="is-fetched") Business - Real Page
             template(v-for="item in navigation")
-                NuxtLink.p-4.rounded.border(:to="item.href",prefetchedClass="is-fetched") {{ item.text }}
-            
+                div.h-12.bg-blue-400
+                    NuxtLink.p-4.rounded.border(:to="item.href",prefetchedClass="is-fetched") {{ item.text }}
+                    template(v-if="item.children?.length > 0")
+                        template(v-for="child in item.children")
+                            div.h-12
+                                NuxtLink.p-4.rounded.border(:to="`${item.href}${child.href}`",prefetchedClass="is-fetched") {{ child.text }}
+        
 
     .w-full.bg-red-200(class="min-h-[32rem]")
         //- slot
